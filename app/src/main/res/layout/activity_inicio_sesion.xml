@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioSesion">
+
+    <EditText
+        android:id="@+id/txCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txCorreo" />
+
+    <Button
+        android:id="@+id/btIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="iniciar sesión"
+        app:layout_constraintEnd_toEndOf="@+id/txContraseña"
+        app:layout_constraintStart_toStartOf="@+id/txContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/txContraseña" />
+
+    <Button
+        android:id="@+id/btCrearUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="crear usuario"
+        app:layout_constraintEnd_toEndOf="@+id/txContraseña"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/txContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciarSesion" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btLoginGoogle"
+        android:layout_width="138dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCrearUsuario" /> "/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
