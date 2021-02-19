@@ -6,13 +6,40 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000097c5-9102-4cc7-9e06-b417ce1ad296" name="Default Changelist" comment="" />
+    <list default="true" id="000097c5-9102-4cc7-9e06-b417ce1ad296" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/FinalizarPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/controlador/AdaptadorLineas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/controlador/ProductosAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_finalizar_pedido.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_finalizar_pedido.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_linea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/controlador/AdaptadorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/controlador/AdaptadorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/ui/InicioFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/ui/InicioFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/ui/RealizarPedidoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aplicacioncliente/ui/RealizarPedidoFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_realizarpedido.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_realizarpedido.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_30" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="QV700ZW40X" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -21,7 +48,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -33,29 +65,40 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1oZUuiANO1FBBXG8oFXNX9ASO7T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_API_30" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-18T17:31:06.613Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="QV700ZW40X" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-19T17:50:20.674Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Inventario" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ACER\Box Sync\2DAM\ProyectosAndroid\AplicacionCliente\app\src\main\java\com\example\aplicacioncliente\ui" />
+    <key name="android.template.-369065462">
+      <recent name="com.example.aplicacioncliente" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.aplicacioncliente" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ACER\Box Sync\2DAM\ProyectosAndroid\AplicacionCliente\app\src\main\java\com\example\aplicacioncliente\controlador" />
+      <recent name="C:\Users\ACER\Box Sync\2DAM\ProyectosAndroid\AplicacionCliente\app\src\main\java\com\example\aplicacioncliente\modelos" />
     </key>
     <key name="android.template.-213895736">
       <recent name="com.example.aplicacioncliente" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ACER\Box Sync\2DAM\ProyectosAndroid\AplicacionCliente\app\src\main\java\com\example\aplicacioncliente\modelos" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ACER\Box Sync\2DAM\ProyectosAndroid\AplicacionCliente\app\src\main\java\com\example\aplicacioncliente\ui" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,38 +175,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1613648151726">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1613758001532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613648151726" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613494173463">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613758001532" />
+    <state x="470" y="222" width="425" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613754858741">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613494173463" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1613641373364">
+    <state x="470" y="222" width="425" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1613754858741" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613755386008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1613641373364" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1613494705463">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613755386008" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1613758113058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613494705463" />
-    <state width="1323" height="475" key="GridCell.Tab.0.bottom" timestamp="1613669564417">
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1613758113058" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1613756264986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="475" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613669564417" />
-    <state width="1323" height="475" key="GridCell.Tab.0.center" timestamp="1613669564417">
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613756264986" />
+    <state width="1323" height="475" key="GridCell.Tab.0.bottom" timestamp="1613760851522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="475" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613669564417" />
-    <state width="1323" height="475" key="GridCell.Tab.0.left" timestamp="1613669564417">
+    <state width="1323" height="475" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613760851522" />
+    <state width="1323" height="475" key="GridCell.Tab.0.center" timestamp="1613760851522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="475" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613669564417" />
-    <state width="1323" height="475" key="GridCell.Tab.0.right" timestamp="1613669564417">
+    <state width="1323" height="475" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613760851522" />
+    <state width="1323" height="475" key="GridCell.Tab.0.left" timestamp="1613760851521">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="475" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613669564417" />
+    <state width="1323" height="475" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613760851521" />
+    <state width="1323" height="475" key="GridCell.Tab.0.right" timestamp="1613760851522">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="475" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613760851522" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613558759403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

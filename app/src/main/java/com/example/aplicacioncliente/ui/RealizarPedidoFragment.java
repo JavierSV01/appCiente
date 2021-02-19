@@ -1,21 +1,27 @@
 package com.example.aplicacioncliente.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aplicacioncliente.FinalizarPedido;
 import com.example.aplicacioncliente.R;
 import com.example.aplicacioncliente.controlador.AdaptadorProductos;
+import com.example.aplicacioncliente.controlador.ProductosAdapter;
 import com.example.aplicacioncliente.modelos.Comercio;
 import com.example.aplicacioncliente.modelos.Linea_Pedido;
+import com.example.aplicacioncliente.modelos.Pedido;
 import com.example.aplicacioncliente.modelos.Producto;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -24,7 +30,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class RealizarPedidoFragment extends Fragment {
@@ -36,6 +44,7 @@ public class RealizarPedidoFragment extends Fragment {
     FirebaseDatabase database;
     DatabaseReference myRefComercios;
     DatabaseReference myRefProductos;
+    DatabaseReference myRefPedidos;
 
     Button btCarrito;
 
@@ -52,6 +61,7 @@ public class RealizarPedidoFragment extends Fragment {
         database = FirebaseDatabase.getInstance();
         myRefComercios = database.getReference("comercios");
         myRefProductos = database.getReference("productos");
+        myRefPedidos = database.getReference("pedidos");
         return root;
     }
 
@@ -60,23 +70,30 @@ public class RealizarPedidoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         lecturaDatos();
         this.view = view;
+        btCarrito = view.findViewById(R.id.btCarrito);
 
-        /*
+
         btCarrito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < listaLineas.size(); i++) {
-                    System.out.println(listaLineas.get(i).getIdProducto() + " " + listaLineas.get(i).getCantidadProducto());
+                if (listaLineas.size() > 0){
+                    String pedidoKey = myRefPedidos.child("lineasPedido").push().getKey();
+
+                    for (int i = 0; i < listaLineas.size(); i++) {
+                        listaLineas.get(i).setIdPedido(pedidoKey);
+                        myRefPedidos.child("lineasPedido").push().setValue(listaLineas.get(i));
+                    }
+                    Intent i = new Intent(getContext(), FinalizarPedido.class);
+                    Pedido pedido = new Pedido(pedidoKey, FirebaseAuth.getInstance().getUid(), "apuntado", new Date(), "");
+                    i.putExtra("pedido", pedido);
+                    startActivity(i);
+                }else{
+                    Toast.makeText(getContext(), "Ddebes añadir productos al carrito", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
-        */
-
-
     }
-
-
-
 
     private void lecturaDatos() {
         ValueEventListener postListenerComercios = new ValueEventListener() {
@@ -105,8 +122,10 @@ public class RealizarPedidoFragment extends Fragment {
 
                 for (DataSnapshot xProducto : dataSnapshot.getChildren()) {
                     Producto p = xProducto.getValue(Producto.class);
+                    System.out.println(p.getNombre());
                     listaProductos.add(p);
                 }
+                System.out.println("Tamaño lista " + listaProductos.size());
                 lanzarRV();
             }
 
@@ -125,7 +144,7 @@ public class RealizarPedidoFragment extends Fragment {
             rvProductos = view.findViewById(R.id.recyclerViewProductos);
             layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
             rvProductos.setLayoutManager(layoutManager);
-            adaptador = new AdaptadorProductos(getContext(), listaProductos, listaLineas);
+            adaptador = new ProductosAdapter(listaProductos, getContext(), listaLineas);
             rvProductos.setAdapter(adaptador);
         } catch (Exception e) {
             System.out.println(e.getMessage());
