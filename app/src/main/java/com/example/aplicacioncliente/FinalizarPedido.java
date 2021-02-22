@@ -75,13 +75,12 @@ public class FinalizarPedido extends AppCompatActivity {
         btRealizarPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (rdDomicilio.isChecked()){
-                    pedido.setEntregaPedido("domicilio");
+                    pedido.setEntregaPedido("A domicilio");
                     myRefPedidos.push().setValue(pedido);
                 }
                 if (rdRecogida.isChecked()){
-                    pedido.setEntregaPedido("recogida");
+                    pedido.setEntregaPedido("Recogida");
                     myRefPedidos.push().setValue(pedido);
                 }
             }

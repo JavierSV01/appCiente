@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutItem"
@@ -42,7 +44,6 @@
                 android:id="@+id/btMenos"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="5dp"
                 android:text="-"
                 app:layout_constraintBottom_toBottomOf="@+id/txCantidad"
                 app:layout_constraintEnd_toStartOf="@+id/txCantidad"
@@ -52,7 +53,6 @@
                 android:id="@+id/txCantidad"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
                 android:text="0"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="@+id/btMas"
@@ -90,7 +90,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:text="TextView"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="TextView"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 

@@ -71,6 +71,7 @@ public class SaldoFragment extends Fragment {
                     } else {
                         Toast.makeText(getContext(), "Introduce una cantidad positiva", Toast.LENGTH_SHORT).show();
                     }
+                    txAñadir.setText("");
                 } else {
                     Toast.makeText(getContext(), "Introduce la cantidad a añadir", Toast.LENGTH_SHORT).show();
                 }
@@ -83,12 +84,13 @@ public class SaldoFragment extends Fragment {
             public void onClick(View v) {
                 if (!txRetirar.getText().toString().equals("")) {
                     Float cantidadRetirar = Float.parseFloat(txRetirar.getText().toString());
-                    if (usuarioActual.getSaldo() >0) {
+                    if (usuarioActual.getSaldo() >= 0 + cantidadRetirar) {
                         usuarioActual.setSaldo(usuarioActual.getSaldo() - cantidadRetirar);
                         myRef.setValue(usuarioActual);
                     } else {
                         Toast.makeText(getContext(), "No puedes retirar dinero si estas en negativo", Toast.LENGTH_SHORT).show();
                     }
+                    txRetirar.setText("");
                 } else {
                     Toast.makeText(getContext(), "Introduce la cantidad a retirar", Toast.LENGTH_SHORT).show();
                 }

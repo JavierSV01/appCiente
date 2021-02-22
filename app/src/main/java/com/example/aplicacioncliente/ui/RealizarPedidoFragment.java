@@ -11,13 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aplicacioncliente.FinalizarPedido;
 import com.example.aplicacioncliente.R;
-import com.example.aplicacioncliente.controlador.AdaptadorProductos;
 import com.example.aplicacioncliente.controlador.ProductosAdapter;
 import com.example.aplicacioncliente.modelos.Comercio;
 import com.example.aplicacioncliente.modelos.Linea_Pedido;
@@ -30,10 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class RealizarPedidoFragment extends Fragment {
 
@@ -84,7 +80,7 @@ public class RealizarPedidoFragment extends Fragment {
                         myRefPedidos.child("lineasPedido").push().setValue(listaLineas.get(i));
                     }
                     Intent i = new Intent(getContext(), FinalizarPedido.class);
-                    Pedido pedido = new Pedido(pedidoKey, FirebaseAuth.getInstance().getUid(), "apuntado", new Date(), "");
+                    Pedido pedido = new Pedido(pedidoKey, FirebaseAuth.getInstance().getUid(), "Apuntado", new Date(), "");
                     i.putExtra("pedido", pedido);
                     startActivity(i);
                 }else{
@@ -125,7 +121,7 @@ public class RealizarPedidoFragment extends Fragment {
                     System.out.println(p.getNombre());
                     listaProductos.add(p);
                 }
-                System.out.println("Tamaño lista " + listaProductos.size());
+
                 lanzarRV();
             }
 
