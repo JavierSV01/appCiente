@@ -76,11 +76,11 @@ public class FinalizarPedido extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (rdDomicilio.isChecked()){
-                    pedido.setEntregaPedido("A domicilio");
+                    pedido.setEntregaPedido("domicilio");
                     myRefPedidos.push().setValue(pedido);
                 }
                 if (rdRecogida.isChecked()){
-                    pedido.setEntregaPedido("Recogida");
+                    pedido.setEntregaPedido("recogida");
                     myRefPedidos.push().setValue(pedido);
                 }
             }
