@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -43,7 +44,8 @@ public class PerfilFragment extends Fragment {
     Usuario usuarioActual;
     String uidUsuarioActual;
     EditText txNombre, txDireccion, txTelefono;
-    Button btCambiarFoto, btGuardarCambios;
+    Button btGuardarCambios;
+    ImageButton btCambiarFoto;
     CircleImageView imageView;
 
 
@@ -75,7 +77,7 @@ public class PerfilFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        btCambiarFoto = view.findViewById(R.id.btCambiarFoto);
+        btCambiarFoto = view.findViewById(R.id.btCambiar);
         btGuardarCambios = view.findViewById(R.id.btGuardarCambios);
         txNombre = view.findViewById(R.id.txNombre);
         txDireccion = view.findViewById(R.id.txDireccion);

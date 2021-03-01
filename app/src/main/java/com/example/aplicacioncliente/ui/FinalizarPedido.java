@@ -1,4 +1,4 @@
-package com.example.aplicacioncliente;
+package com.example.aplicacioncliente.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.aplicacioncliente.R;
 import com.example.aplicacioncliente.controlador.AdaptadorLineas;
 import com.example.aplicacioncliente.modelos.Linea_Pedido;
 import com.example.aplicacioncliente.modelos.Pedido;
@@ -77,12 +78,14 @@ public class FinalizarPedido extends AppCompatActivity {
             public void onClick(View v) {
                 if (rdDomicilio.isChecked()){
                     pedido.setEntregaPedido("domicilio");
-                    myRefPedidos.push().setValue(pedido);
+                    myRefPedidos.child(pedido.getIdPedido()).setValue(pedido);
                 }
                 if (rdRecogida.isChecked()){
                     pedido.setEntregaPedido("recogida");
-                    myRefPedidos.push().setValue(pedido);
+                    myRefPedidos.child(pedido.getIdPedido()).setValue(pedido);
                 }
+                Toast.makeText(FinalizarPedido.this, "Pedido realizado correctamente", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
@@ -96,8 +99,6 @@ public class FinalizarPedido extends AppCompatActivity {
                 listaLineas.clear();
                 for (DataSnapshot xLineas : dataSnapshot.getChildren()) {
                     Linea_Pedido p = xLineas.getValue(Linea_Pedido.class);
-                    System.out.println("id pedido " + pedido.getIdPedido());
-                    System.out.println("id linea " + p.getIdPedido());
                     if (pedido.getIdPedido().equals(p.getIdPedido())){
                         listaLineas.add(p);
                     }

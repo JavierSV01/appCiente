@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.PedidoEnDetalle">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLineasPedidoEnDetalle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btEliminarPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btEliminarPedido"
+        android:layout_width="125dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bt_personalizado"
+        android:text="Elimiar pedido"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,23 +32,27 @@
 
     <Button
         android:id="@+id/btIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/bt_personalizado"
         android:text="iniciar sesión"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/txContraseña"
         app:layout_constraintStart_toStartOf="@+id/txContraseña"
         app:layout_constraintTop_toBottomOf="@+id/txContraseña" />
 
     <Button
         android:id="@+id/btCrearUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/bt_personalizado"
         android:text="crear usuario"
-        app:layout_constraintEnd_toEndOf="@+id/txContraseña"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/btIniciarSesion"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/txContraseña"
+        app:layout_constraintStart_toStartOf="@+id/btIniciarSesion"
         app:layout_constraintTop_toBottomOf="@+id/btIniciarSesion" />
 
     <com.google.android.gms.common.SignInButton

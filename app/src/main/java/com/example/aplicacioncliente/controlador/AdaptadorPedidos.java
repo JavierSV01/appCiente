@@ -1,22 +1,19 @@
 package com.example.aplicacioncliente.controlador;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.example.aplicacioncliente.ui.FinalizarPedido;
 import com.example.aplicacioncliente.R;
-import com.example.aplicacioncliente.modelos.Linea_Pedido;
 import com.example.aplicacioncliente.modelos.Pedido;
-import com.example.aplicacioncliente.modelos.Producto;
+import com.example.aplicacioncliente.ui.PedidoEnDetalle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,16 +37,25 @@ public class AdaptadorPedidos extends RecyclerView.Adapter<AdaptadorPedidos.Adap
 
     @Override
     public void onBindViewHolder(@NonNull AdaptadorViewHolder holder, int position) {
-        Pedido pedido = listaPedidos.get(position);
+        final Pedido pedido = listaPedidos.get(position);
         try {
             holder.txtTipo.setText(pedido.getEntregaPedido());
             holder.txtId.setText(String.valueOf(pedido.getIdPedido()));
             holder.txtFecha.setText(pedido.getFecha().getDate() + "/" + (pedido.getFecha().getMonth() + 1) + "/" + (pedido.getFecha().getYear() + 1900));
             holder.txtEstado.setText(pedido.getEstado());
-
+            holder.view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(contexto, PedidoEnDetalle.class);
+                    i.putExtra("pedido", pedido);
+                    contexto.startActivity(i);
+                }
+            });
         } catch (NullPointerException ex) {
 
         }
+
+
     }
 
     @Override
@@ -59,9 +65,11 @@ public class AdaptadorPedidos extends RecyclerView.Adapter<AdaptadorPedidos.Adap
 
     public class AdaptadorViewHolder extends RecyclerView.ViewHolder {
         private TextView txtTipo, txtId, txtFecha, txtEstado;
+        private View view;
 
         public AdaptadorViewHolder(@NonNull View itemView) {
             super(itemView);
+            view = itemView.findViewById(R.id.cardViewPedidos);
             txtFecha = itemView.findViewById(R.id.txFechaPedido);
             txtTipo = itemView.findViewById(R.id.txTipo);
             txtId = itemView.findViewById(R.id.txIdPEdido);

@@ -31,7 +31,9 @@
         android:id="@+id/btAñadir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/bt_personalizado"
         android:text="Añadir"
+        android:textColor="#FBFBFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txAñadir"
         app:layout_constraintTop_toTopOf="@+id/txAñadir" />
@@ -62,7 +64,9 @@
         android:id="@+id/btRetirar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/bt_personalizado"
         android:text="Retirar"
+        android:textColor="#FBFBFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txRetirar"
         app:layout_constraintTop_toTopOf="@+id/txRetirar" />

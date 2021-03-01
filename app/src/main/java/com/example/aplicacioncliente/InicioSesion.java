@@ -105,7 +105,8 @@ public class InicioSesion extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Registado correctamente", Toast.LENGTH_SHORT).show();
-                            Usuario u = new Usuario(FirebaseAuth.getInstance().getUid(), txEmail.getText().toString(), 0);
+                            Usuario u = new Usuario(FirebaseAuth.getInstance().getUid(), txEmail.getText().toString(), "null", 0, "null", "null", "https://firebasestorage.googleapis.com/v0/b/asociacioncomercios-aa45a.appspot.com/o/usuarios%2FuserPorDefecto.png?alt=media&token=00475335-5b1f-42d3-b0f0-8f9952174695");
+
                             myRef.child(FirebaseAuth.getInstance().getUid()).setValue(u);
                         } else {
                             Toast.makeText(getApplicationContext(), "Error al registrar", Toast.LENGTH_SHORT).show();
@@ -184,7 +185,7 @@ public class InicioSesion extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 Toast.makeText(this, "Sesion iniciada correctamente", Toast.LENGTH_SHORT).show();
-                Usuario u = new Usuario(FirebaseAuth.getInstance().getUid(), user.getEmail(), 0);
+                Usuario u = new Usuario(FirebaseAuth.getInstance().getUid(),  user.getEmail(), "null", 0, "null", "null", "https://firebasestorage.googleapis.com/v0/b/asociacioncomercios-aa45a.appspot.com/o/usuarios%2FuserPorDefecto.png?alt=media&token=00475335-5b1f-42d3-b0f0-8f9952174695");
                 Boolean nuevoUsuario = true;
                 for (int i = 0; i< listaUsuarios.size(); i++){
                     if (listaUsuarios.get(i).getUserId().equals(u.getUserId())){

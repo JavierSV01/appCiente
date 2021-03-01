@@ -25,11 +25,13 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Adap
     public List<Producto> listaProductos = new ArrayList<>();
     public Context contexto;
     private List<Linea_Pedido> listaLineasPedido = new ArrayList<>();
+    private String pedidoKey;
 
-    public ProductosAdapter(List<Producto> lista , Context contexto, List<Linea_Pedido> listaLineasPedido) {
+    public ProductosAdapter(List<Producto> lista , Context contexto, List<Linea_Pedido> listaLineasPedido, String pedidoKey) {
         this.listaProductos = lista;
         this.listaLineasPedido = listaLineasPedido;
         this.contexto = contexto;
+        this.pedidoKey = pedidoKey;
     }
 
     @NonNull
@@ -92,7 +94,11 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Adap
             btMas.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    txtCantidad.setText(String.valueOf(Integer.parseInt(txtCantidad.getText().toString()) + 1));
+
+                    if (getProducto().getStock() > Integer.parseInt(txtCantidad.getText().toString())){
+                        txtCantidad.setText(String.valueOf(Integer.parseInt(txtCantidad.getText().toString()) + 1));
+                    }
+
                 }
             });
 
